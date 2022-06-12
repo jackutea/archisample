@@ -1,0 +1,30 @@
+命名空间:
+1. 起隔离类的作用
+2. 起到分类的作用
+
+原则:
+架构是随着工程的变化而变化
+
+层次关系:
+App 最高层(可以知道/拿到所有比它低层的存在)
+Controller
+Facades - All
+    Manager 管理器
+    Repository
+    Assets
+Event / Models 角色 怪物
+
+Entities
+    高层 Role / Monster / Projectile
+    低层 Skill / Inventory(背)
+    最低层 IRole
+
+同层之间, 互相不知道的
+低层不知道高层的类名
+
+程序集:
+dll
+
+架构作用:
+1. 分离逻辑, 让代码更可读、可改
+2. 控制顺序, 请程序按自己知道的、确定的顺序来执行
